@@ -1,52 +1,44 @@
 # AI-Auto-Pitch-for-Utau
-AI Auto Pitch 为 OpenUtau 提供 AI 驱动的自然音高曲线生成
-AI Auto Pitch for OpenUtau
-基于 VAE 的自动音高曲线生成插件，为 OpenUtau 提供自然的颤音和滑音效果。
+# AI Auto Pitch for OpenUtau
 
-🎵 功能
-选中音符 → 右键 → Plugins → AI Auto Pitch
+选中音符，一键生成自然的颤音、滑音和起音效果。基于 VAE 深度学习模型，40 分钟多歌手清唱数据训练，CPU 推理无需显卡。
 
-自动生成自然的音高曲线（颤音、滑音、起音下降）
+## 功能
+- 多歌手通用
+- 100万参数 TCN-VAE 模型
+- CPU 推理和GPU推理皆可
 
-支持多歌手通用
+## 安装
 
-📦 安装
-下载 AI-Auto-Pitch-for-Utau.zip
+1. 下载 `AI-Auto-Pitch-for-Utau.zip`
+2. 解压到 `OpenUtau/Plugins/`
 
-确保目录结构与github一致
+## 使用
 
-🚀 使用
-在 OpenUtau 中选中音符
+1. 选中音符
+2. 右键 → Plugins → AI Auto Pitch
+3. 完成
 
-右键 → Plugins → AI Auto Pitch
+## 技术栈
 
-音高曲线自动生成
+| 组件 | 技术 |
+|------|------|
+| 模型 | TCN-VAE |
+| F0 提取 | FCPE |
+| 数据 | 40分钟多歌手清唱 |
+| 推理 | ONNX Runtime |
+| 音高 | ±80 音分，S型曲线 |
 
-🔧 技术细节
-模型：MLP-VAE（~18万参数）
+## 训练
 
-输入：MIDI、起音标志、剩余时长、前后音符
-
-输出：每帧音分偏移（±80音分）
-
-F0提取：FCPE
-
-数据：40分钟多歌手清唱
-
-🛠️ 训练自己的模型
-bash
-pip install torch numpy librosa torchfcpe
+```bash
+pip install torch numpy librosa torchfcpe onnx onnxruntime
 python train_vae.py
-将生成的 pitch_vae.onnx 重命名为 pitch_model.onnx 放入插件目录。
+```
 
-📝 许可证
+将 `pitch_vae.onnx` 改名为 `pitch_model.onnx` 放入插件目录。
+
+## 许可
+
 MIT
-
-🤝 致谢
-OpenUtau
-
-FCPE
-
-PyTorch
-
 
