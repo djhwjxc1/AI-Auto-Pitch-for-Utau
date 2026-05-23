@@ -1,0 +1,4 @@
+name=AI Auto Pitch
+execute=auto_pitch.exe
+notes=all
+encoding=shift_jis
