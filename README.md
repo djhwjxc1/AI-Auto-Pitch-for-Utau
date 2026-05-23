@@ -1,5 +1,4 @@
 # AI-Auto-Pitch-for-Utau
-# AI Auto Pitch for OpenUtau
 
 选中音符，一键生成自然的颤音、滑音和起音效果。基于 VAE 深度学习模型，40 分钟多歌手清唱数据训练，CPU 推理无需显卡。
 
