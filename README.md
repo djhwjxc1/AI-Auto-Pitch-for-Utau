@@ -11,19 +11,9 @@ AI Auto Pitch for OpenUtau
 支持多歌手通用
 
 📦 安装
-下载 AutoPitch.zip
+下载 AI-Auto-Pitch-for-Utau.zip
 
-解压到 OpenUtau/Plugins/AutoPitch/
-
-确保目录结构：
-
-text
-AutoPitch/
-├── plugin.txt
-├── auto_pitch_script.py
-├── pitch_model.onnx
-└── error.log（自动生成）
-重启 OpenUtau
+确保目录结构与github一致
 
 🚀 使用
 在 OpenUtau 中选中音符
@@ -59,4 +49,4 @@ FCPE
 
 PyTorch
 
-所有提供训练数据的歌手
+
